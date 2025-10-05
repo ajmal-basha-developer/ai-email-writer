@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "AI Email Writer Pro",
+  "version": "1.0",
+  "description": "AI-powered email reply generator with tone selection",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:8080/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "AI Email Writer Pro"
+  }
+}

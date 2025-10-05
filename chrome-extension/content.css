@@ -1,0 +1,396 @@
+/* 🤖 AI Reply Button - Futuristic AI Theme */
+.ai-reply-button {
+  margin-left: 16px !important;
+  margin-right: 8px !important;
+  padding: 0 28px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  
+  /* Futuristic gradient */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  
+  border: none !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  font-family: 'Google Sans', 'Segoe UI', Roboto, sans-serif !important;
+  min-width: 100px !important;
+  
+  /* Advanced effects */
+  box-shadow: 
+    0 4px 20px rgba(102, 126, 234, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  
+  /* Smooth animations */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  
+  /* Text effects */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  letter-spacing: 0.3px !important;
+  
+  /* Glow effect */
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Hover effect with enhanced glow */
+.ai-reply-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 
+    0 8px 30px rgba(102, 126, 234, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Active state */
+.ai-reply-button:active {
+  transform: translateY(0) scale(1) !important;
+  box-shadow: 
+    0 4px 15px rgba(102, 126, 234, 0.4),
+    inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.1s ease !important;
+}
+
+/* AI-themed loading animation */
+.ai-reply-button.loading {
+  position: relative;
+  color: transparent !important;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  animation: aiGlow 2s ease-in-out infinite alternate !important;
+}
+
+.ai-reply-button.loading::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: aiShine 3s infinite;
+}
+
+.ai-reply-button.loading::after {
+  content: "⚡";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  animation: aiPulse 1s infinite alternate;
+}
+
+/* Success state - Emerald gradient */
+.ai-reply-button.success {
+  background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(11, 163, 96, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Error state - Ruby gradient */
+.ai-reply-button.error {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  box-shadow: 
+    0 4px 20px rgba(255, 107, 107, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Disabled state */
+.ai-reply-button:disabled {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  opacity: 0.8 !important;
+}
+
+/* AI Icon before text */
+.ai-reply-button::before {
+  content: "🤖";
+  margin-right: 8px;
+  font-size: 16px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.ai-reply-button:hover::before {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Success icon */
+.ai-reply-button.success::before {
+  content: "✨";
+  animation: sparkle 1s ease-in-out;
+}
+
+/* Error icon */
+.ai-reply-button.error::before {
+  content: "⚠️";
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Pulsing glow effect */
+@keyframes aiPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Shine animation */
+@keyframes aiShine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Glow animation */
+@keyframes aiGlow {
+  0% {
+    box-shadow: 
+      0 4px 20px rgba(79, 172, 254, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 4px 25px rgba(79, 172, 254, 0.7),
+      0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Floating animation for attention */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+/* Initial attention grabber */
+.ai-reply-button.new {
+  animation: float 3s ease-in-out infinite, aiGlow 2s ease-in-out infinite alternate;
+}
+
+/* Premium border effect */
+.ai-reply-button::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #4facfe, #00f2fe);
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ai-reply-button:hover::after {
+  opacity: 1;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Focus state for accessibility */
+.ai-reply-button:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(102, 126, 234, 0.3),
+    0 4px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* 🤖 Tone Selection Modal Styles */
+.ai-tone-modal {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  z-index: 10000 !important;
+  padding: 24px !important;
+  min-width: 320px !important;
+  max-width: 400px !important;
+  font-family: 'Google Sans', Roboto, sans-serif !important;
+  animation: modalSlideIn 0.3s ease-out !important;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.ai-tone-modal h3 {
+  margin: 0 0 16px 0 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #202124 !important;
+  text-align: center !important;
+}
+
+.ai-tone-options {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.tone-option {
+  padding: 12px 16px !important;
+  border: 2px solid #e8eaed !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  background: white !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.tone-option:hover {
+  border-color: #667eea !important;
+  background: #f8f9ff !important;
+  transform: translateY(-1px) !important;
+}
+
+.tone-option.selected {
+  border-color: #667eea !important;
+  background: linear-gradient(135deg, #667eea15, #764ba215) !important;
+  color: #667eea !important;
+}
+
+.tone-option .tone-emoji {
+  margin-right: 8px !important;
+  font-size: 16px !important;
+}
+
+.tone-option .tone-description {
+  font-size: 12px !important;
+  color: #5f6368 !important;
+  margin-top: 2px !important;
+}
+
+.ai-tone-actions {
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+}
+
+.ai-tone-button {
+  padding: 10px 20px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.ai-tone-button.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+}
+
+.ai-tone-button.primary:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+.ai-tone-button.secondary {
+  background: #f1f3f4 !important;
+  color: #5f6368 !important;
+}
+
+.ai-tone-button.secondary:hover {
+  background: #e8eaed !important;
+}
+
+/* Modal overlay */
+.ai-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 9999 !important;
+  animation: fadeIn 0.2s ease-out !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Tone indicator on main button */
+.ai-reply-button.with-tone::after {
+  content: "•";
+  margin-left: 4px;
+  color: #0ba360;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
