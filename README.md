@@ -55,9 +55,9 @@ A powerful Chrome extension that integrates AI-powered email reply generation di
 #### Create `backend/src/main/resources/application.properties`
 ```properties
 spring.application.name=email-writer-sb
-gemini.api.url=YOUR_ACTUAL_URL_HERE
-gemini.api.key=YOUR_ACTUAL_API_KEY_HERE
-server.port=8080
+gemini.api.url=
+gemini.api.key=
+server.port=
 logging.level.com.email.writer=DEBUG
 ```
 
